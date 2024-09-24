@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "type": "module",
   "private": true,
   "scripts": {
@@ -11,9 +11,9 @@
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
   },
   "dependencies": {
-    "@signoz/input": "workspace:*",
-    "@signoz/button": "workspace:*",
-    "@signoz/tailwind-config": "workspace:*",
+    "@ahmadshaheer/input": "workspace:*",
+    "@ahmadshaheer/button": "workspace:*",
+    "@ahmadshaheer/tailwind-config": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

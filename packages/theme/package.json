@@ -1,6 +1,6 @@
 {
-  "name": "@signoz/theme",
-  "version": "0.0.0",
+  "name": "@ahmadshaheer/theme",
+  "version": "0.0.1",
   "type": "module",
   "main": "./src/index.tsx",
   "types": "./src/index.tsx",
@@ -12,7 +12,7 @@
     "dev": "vite build --watch"
   },
   "dependencies": {
-    "@signoz/design-tokens": "latest",
+    "@ahmadshaheer/design-tokens": "latest",
     "@types/react": "^18.3.8",
     "react": "^18.2.0"
   },

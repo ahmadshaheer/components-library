@@ -1,6 +1,6 @@
 {
-  "name": "@signoz/tailwind-config",
-  "version": "0.0.0",
+  "name": "@ahmadshaheer/tailwind-config",
+  "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
     "tailwindcss": "^3.4.12",

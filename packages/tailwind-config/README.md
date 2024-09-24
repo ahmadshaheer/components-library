@@ -1,4 +1,4 @@
-# `@signoz/tailwind-config`
+# `@ahmadshaheer/tailwind-config`
 
 This package includes shared configuration files for UI components, specifically:
 
