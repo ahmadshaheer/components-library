@@ -1,5 +1,5 @@
 import { Theme } from "./ThemeContext";
-import { Color } from "@shaheerkochai/design-tokens";
+import { Color } from "@signoz/design-tokens";
 
 export const ThemeColors = {
   light: {
@@ -26,8 +26,7 @@ export const getCSSVariables = (theme: Theme): string => {
   const themeColors = ThemeColors[theme as keyof typeof ThemeColors];
   return Object.entries(themeColors)
     .map(
-      ([key, value]) =>
-        `--${key.toLowerCase().replace(/_/g, "-")}: ${value};`
+      ([key, value]) => `--${key.toLowerCase().replace(/_/g, "-")}: ${value};`
     )
     .join("\n");
 };
