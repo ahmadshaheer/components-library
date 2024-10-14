@@ -23,12 +23,26 @@ jobs:
       # Manual Checkout
       - uses: actions/checkout@v4
 
+      # Setup pnpm
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
       # Set up Node
       - uses: actions/setup-node@v4
         with:
-          node-version: "16.x"
+          node-version: 20
+          cache: "pnpm"
 
-      #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
+      # Install Dependencies
+      - name: Install Dependencies
+        run: pnpm install
+
+      # Build Storybook
+      - name: Build Storybook
+        run: pnpm run build-storybook
+
+        #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
           install_command: yarn install # default: npm ci
