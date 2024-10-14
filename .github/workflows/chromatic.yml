@@ -13,16 +13,31 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
       - name: Enable Corepack
         run: corepack enable
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: "yarn"
-      - run: yarn
+
+      - name: Install Dependencies
+        run: pnpm install
+
       #👇 Adds Chromatic as a step in the workflow
-      - uses: chromaui/action@v1
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
         with:
           #👇 Chromatic projectToken,
