@@ -34,18 +34,10 @@ jobs:
           node-version: 20
           cache: "pnpm"
 
-      # Install Dependencies
-      - name: Install Dependencies
-        run: pnpm install
-
-      # Build Storybook
-      - name: Build Storybook
-        run: pnpm run build-storybook
-
         #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          install_command: yarn install # default: npm ci
-          build_command: yarn build-storybook # default: npm run build-storybook
+          install_command: pnpm install # default: npm ci
+          build_command: pnpm build-storybook # default: npm run build-storybook
           path: storybook-static # default: dist/storybook
           checkout: false # default: true
