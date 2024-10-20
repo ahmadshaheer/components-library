@@ -23,8 +23,10 @@ jobs:
           node-version: 20
           cache: "pnpm"
 
-      - name: Install Dependencies
-        run: pnpm install
+      - name: Install Dependencies and Build
+        run: |
+          pnpm install
+          pnpm build
 
       - name: Run Chromatic
         uses: chromaui/action@latest
