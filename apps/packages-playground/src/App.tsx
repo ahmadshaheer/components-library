@@ -12,7 +12,7 @@ function App() {
       <h1>Theme Switcher and Button</h1>
       <ThemeSwitcher />
 
-      <Button theme={theme} variant="secondary">
+      <Button theme={theme} variant="default">
         hey
       </Button>
 
