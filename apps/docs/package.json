@@ -10,7 +10,7 @@
     "build-storybook": "storybook build -o storybook-static",
     "clean": "rm -rf .turbo && rm -rf node_modules",
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0",
-    "chromatic": "pnpm dlx chromatic --exit-zero-on-changes --output-dir=storybook-static"
+    "chromatic": "pnpm dlx chromatic --exit-zero-on-changes "
   },
   "dependencies": {
     "@signozhq/button": "workspace:*",
